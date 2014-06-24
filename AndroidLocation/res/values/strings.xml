@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Location Service</string>
+    <string name="next">Next</string>
+    <string name="register">Register</string>
+    <string name="locate">Begin Trace</string>
+    <string name="account">New Account</string>
+    <string name="password">Password</string>
+    <string name="agreeitem">Yes, I agree!</string>
+    <string name="disagreeitem">No, I do not agree!</string>
+    <string name="app_ongoing">App is running background!</string>
+    <string name="sdcard_removed">Your SD card is not ready, please double check it.</string>
+    <string name="statesment">This application is used to location the mobile phone</string>
+    <string name="introduce">How to use this application:</string>
+    <string name="dialog_waiting">Waiting for register...</string>
+    <string name="no_account">Account not exist,please register from website</string>
+    <string name="pwd_fail">Password is not correct</string>
+    <string name="bind_success">Bind successfully!</string>
+    <string name="been_bind">Has been bind to this account</string>
+    <string name="bind_fail">Bind fail</string>
+    <string name="dialog_network_fail">Network fail, retry later</string>
+    <string name="dialog_begin_locate">Trace launched</string>
+    <string name="deviceid">Device ID</string>
+    
+</resources>

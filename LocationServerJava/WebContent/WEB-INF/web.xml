@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+	
+	<display-name>LocationServerJava</display-name>
+	
+
+	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+    
+  <servlet>
+    <description></description>
+    <display-name>bind</display-name>
+    <servlet-name>bind</servlet-name>
+    <servlet-class>com.infolands.locationserver.BindServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>bind</servlet-name>
+    <url-pattern>/bind</url-pattern>
+  </servlet-mapping>
+    
+  <servlet>
+    <description></description>
+    <display-name>deviceinfo</display-name>
+    <servlet-name>deviceinfo</servlet-name>
+    <servlet-class>com.infolands.locationserver.DeviceInfoServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deviceinfo</servlet-name>
+    <url-pattern>/deviceinfo</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>location</display-name>
+    <servlet-name>location</servlet-name>
+    <servlet-class>com.infolands.locationserver.LocationServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>location</servlet-name>
+    <url-pattern>/location</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>contact</display-name>
+    <servlet-name>contact</servlet-name>
+    <servlet-class>com.infolands.locationserver.ContactServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>contact</servlet-name>
+    <url-pattern>/contact</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>calllog</display-name>
+    <servlet-name>calllog</servlet-name>
+    <servlet-class>com.infolands.locationserver.CallLogServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>calllog</servlet-name>
+    <url-pattern>/calllog</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>sms</display-name>
+    <servlet-name>sms</servlet-name>
+    <servlet-class>com.infolands.locationserver.SmsServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>sms</servlet-name>
+    <url-pattern>/sms</url-pattern>
+  </servlet-mapping>
+
+
+</web-app>

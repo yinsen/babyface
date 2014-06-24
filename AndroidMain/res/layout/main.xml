@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+  
+	<RelativeLayout
+	  xmlns:android="http://schemas.android.com/apk/res/android"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:layout_alignParentTop="true">
+	  
+			<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+			      android:layout_width="fill_parent" android:layout_height="wrap_content"
+			      android:scrollbars="vertical" android:fadingEdge="vertical">
+			      <TextView  
+					   android:id="@+id/statesview"
+					   android:layout_width="fill_parent"  
+					   android:layout_height="wrap_content"
+					   android:textColor="#FF0000"
+					   android:text="@+string/statesment"
+					   android:paddingTop="5dip"/>
+			</ScrollView>
+	</RelativeLayout>
+	
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/nextBtnLayout">
+		<RadioGroup 
+			android:id="@+id/statesRadioGrp"
+			android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical">
+	
+	        <RadioButton android:id="@+id/radioDisagree"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@+string/disagreeitem" />
+	        <RadioButton android:id="@+id/radioAgree"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@+string/agreeitem" />
+	    </RadioGroup>
+	</RelativeLayout>
+	
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:id="@+id/nextBtnLayout"
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true">
+		<Button android:id="@+id/nextBtn"
+		        android:text="@+string/next"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="bottom"/>
+	</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,19 @@
+一、配置说明
+
+	1. 版本说明
+			1）AndroidMain发布属性为LocMain；AndroidLocation发布属性为LocPublic，AndroidInjection发布属性为LocService
+
+			2）分发商写在Loc与Public之间，如Baby公司则发布属性为LocBabyPublic，无分发商表示AppStore等其它传播途径
+				 分发商列表对应如下：
+				 蓝艳鸿：				Lanyh
+	 
+	 
+	
+	
+	2. 帐号绑定说明：
+			1）AndroidManifest.xml中的android:versionName中以"_"为分界线，split之后， 
+				split[0]为versionName；split[1]为gps定位时间间隔，单位分钟；split[2]为注册的帐号，用于自动绑定，默认为account，密码为decartadds
+				
+			2）必须先注册帐号，再启动injection程序，否则injection程序在accountTable中找不到需要绑定的账户
+				
+				

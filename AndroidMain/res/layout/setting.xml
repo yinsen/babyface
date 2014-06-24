@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	
+	<RelativeLayout
+	  xmlns:android="http://schemas.android.com/apk/res/android"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:layout_alignParentTop="true">
+	  
+			<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+			      android:layout_width="fill_parent" android:layout_height="wrap_content"
+			      android:scrollbars="vertical" android:fadingEdge="vertical">
+			      <TextView  
+					   android:id="@+id/howtoview"
+					   android:layout_width="fill_parent"  
+					   android:layout_height="wrap_content"
+					   android:textColor="#FF0000"
+					   android:text="@+string/statesment"
+					   android:paddingTop="5dip"/>
+			</ScrollView>
+	</RelativeLayout>
+	
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/deviceidLayout"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/accountLayout">
+		<TextView android:id="@+id/deviceid"
+		    android:text="@+string/deviceid"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="3"/>
+		    
+		<TextView android:id="@+id/deviceiView"
+			android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+			android:text=""/>
+	</LinearLayout>
+	
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/accountLayout"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/passwordLayout">
+		<TextView android:id="@+id/account"
+		    android:text="@+string/account"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="3"/>
+		    
+		<EditText android:id="@+id/accountinput"
+			android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+			android:text=""/>
+	</LinearLayout>
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/passwordLayout"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/registerBtnLayout">
+		<TextView android:id="@+id/password"
+		    android:text="@+string/password"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="3"/>
+		    
+		<EditText android:id="@+id/passwordinput"
+			android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+			android:text=""/>
+	</LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:id="@+id/registerBtnLayout"
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true">
+		<Button android:id="@+id/locationBtn"
+		        android:text="@+string/locate"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="left|bottom"
+        		android:layout_weight="1" />
+			    
+		<Button android:id="@+id/registerBtn"
+		        android:text="@+string/register"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="right|bottom"
+        		android:layout_weight="1" />
+	</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,62 @@
+/*
+Document   : decarta
+Created on : Jan 13, 2010, 11:40:20 AM
+Author     : brent
+Description:
+Purpose of the stylesheet follows.
+*/
+
+/* all */
+*{
+    font-size:10pt;
+    /* color:#6f6f6f;  bad for the jquery UI theming*/
+    font-family:Helvetica,Arial,sans-serif;
+}
+
+html, body {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#context_menu{
+    position:absolute;
+    background-color:white;
+    color:black;
+    width:120px;
+    z-index:10050;
+    padding: 12px;
+    border:1px solid #AAAAAA;
+    -moz-box-shadow: 2px 2px 4px #666;
+    -webkit-box-shadow: 2px 2px 4px #666;
+    box-shadow: 2px 2px 4px #666;
+}
+
+#context_menu .menuItem{
+    padding: 2px;
+    cursor: pointer;
+}
+
+#context_menu .separator{
+    height: 1px;
+    line-height: 1px;
+    border-bottom: 1px dotted gray;
+    margin: 4px;
+}
+
+#context_menu  .on{
+    background-color:#bbb;
+}
+
+#context_menu  .off{
+    background-color:#fff;
+}
+
+.clear{
+    clear: both;
+}

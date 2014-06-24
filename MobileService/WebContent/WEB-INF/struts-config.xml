@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	
+	<!-- =================================== Database Definitions -->
+	<data-sources>
+		<data-source key="mobile" type="org.apache.tomcat.dbcp.dbcp.BasicDataSource">
+			<set-property property="driverClassName" value="com.mysql.jdbc.Driver" />
+			<set-property property="url" value="jdbc:mysql://localhost:3306/locationPublic"/>
+			<set-property property="username" value="sen" />
+			<set-property property="password" value="sen" />
+			<set-property property="maxActive" value="100" />
+			<set-property property="maxWait" value="5000" />
+			<set-property property="defaultAutoCommit" value="true" />
+			<set-property property="description" value="MySQL Data Source" />
+		</data-source>
+	</data-sources>
+	
+	<!-- ======================================== Form Bean Definitions -->
+	<form-beans>
+		<form-bean name="loginForm" type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="login" type="java.lang.String"/>
+			<form-property name="password" type="java.lang.String"/>
+		</form-bean>
+		
+		<form-bean name="registerForm" type="org.apache.struts.validator.DynaValidatorForm">
+		</form-bean>
+		
+		<form-bean name="queryBackForm" type="org.apache.struts.validator.DynaValidatorForm">
+		</form-bean>
+	</form-beans>
+	<!-- ================================= Global Exception Definitions -->
+	<global-exceptions>
+		<!-- sample exception handler
+        <exception
+            key="expired.password"
+            type="app.ExpiredPasswordException"
+            path="/changePassword.jsp"/>
+        end sample -->
+	</global-exceptions>
+	<!-- =================================== Global Forward Definitions -->
+	<global-forwards>
+		<!-- Default forward to "Welcome" action -->
+		<!-- Demonstrates using index.jsp to forward -->
+		<!-- <forward name="welcome" path="/Welcome.do"/> -->
+		<forward name="timeout" path="/index.jsp?timeout=true"/>
+	</global-forwards>
+
+
+	<!-- =================================== Action Mapping Definitions -->
+	<action-mappings>
+		<action path="/login" type="com.telcontar.actions.LoginAction" name="loginForm" scope="request" validate="true" input="/index.jsp">
+			<forward name="success" path="/map.jsp"/>
+			<forward name="index" path="/index.jsp?failure=true"/>
+		</action>
+		
+		<action path="/register" type="com.telcontar.actions.RegisterAction" name="registerForm" scope="request" validate="true" input="/register.jsp">
+			<forward name="success" path="/map.jsp"/>
+			<forward name="index" path="/index.jsp"/>
+		</action>
+
+		<action path="/queryBack" type="com.telcontar.actions.QueryBackAction" name="queryBackForm" scope="request" validate="true" input="/map.jsp">
+			<forward name="success" path="/map.jsp"/>
+			<forward name="index" path="/index.jsp"/>
+		</action>
+
+	</action-mappings>
+	
+	<!-- ===================================== Controller Configuration -->
+	<controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+	<!-- ================================ Message Resources Definitions -->
+	<message-resources parameter="application"/>
+	<!-- ======================================= Plug Ins Configuration -->
+	<!-- comment following if struts1.0.x -->
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml"/>
+		<set-property property="moduleAware" value="true"/>
+		<set-property property="definitions-parser-validate" value="true"/>
+	</plug-in>
+	<!-- end comment if struts1.0.x -->
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+	</plug-in>
+</struts-config>

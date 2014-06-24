@@ -1,0 +1,103 @@
+导出数据库：mysqldump -u sen -p 数据库名 数据库名.sql
+导入数据库：mysql -u sen -p 
+					use 数据库名
+					source 数据库名.sql
+
+
+
+create table accountTable(
+  account varchar(50)not null primary key,
+  password varchar(50),
+  email varchar(100),
+  licenses_charge int
+);
+
+create table chargeTable(
+  account varchar(50),
+  bank_account varchar(50),
+  charge_mode varchar(20),
+  charge_date varchar(20),
+  charge_quantity int
+);
+
+create table consumeTable(
+  account varchar(50),
+  deviceId varchar(20),
+  consume_date varchar(20),
+  consume_quantity int
+);
+
+create table deviceTable(
+  deviceId varchar(20)not null primary key,
+  simserial varchar(25),
+  imsi varchar(20),
+  phonenumber varchar(20),
+  model varchar(20),
+  androidversion varchar(16),
+  contactmaxid varchar(10),
+  calllogmaxtime varchar(16),
+  smsmaxtime varchar(16),
+  username varchar(30),
+  realm varchar(30),
+  distributor varchar(30),
+  licenses_free int
+);
+
+create table bindTable(
+  account varchar(50)not null,
+  deviceId varchar(20)not null,
+  primary key (account,deviceId)
+);
+
+
+create table contactTable(
+  no bigint unsigned not null primary key auto_increment,
+  deviceId varchar(20),
+  contactid varchar(10),
+  name varchar(20),
+  phonetype varchar(10),
+  phonenumber varchar(20),
+  INDEX USING BTREE (deviceId(15))
+);
+
+create table callLogTable(
+  no bigint unsigned not null primary key auto_increment,
+  deviceId varchar(20),
+  name varchar(20),
+  calltype varchar(6),
+  callnumber varchar(20),
+  time_mills varchar(16),
+  date varchar(20),
+  INDEX USING BTREE (deviceId(15))
+);
+
+create table smsTable(
+  no bigint unsigned not null primary key auto_increment,
+  deviceId varchar(20),
+  name varchar(20),
+  smstype varchar(12),
+  smsnumber varchar(20),
+  time_mills varchar(16),
+  date varchar(20),
+  smsbody varchar(200),
+  INDEX USING BTREE (deviceId(15))
+);
+
+create table locationTable(
+  no bigint unsigned not null primary key auto_increment,
+  deviceId varchar(20),
+  loctype varchar(12),
+  latitude varchar(20),
+  longitude varchar(20),
+  altitude varchar(10),
+  accuracy varchar(10),
+  address varchar(100),
+  mcc varchar(4),
+  mnc varchar(4),
+  cellId varchar(8),
+  lac varchar(8),
+  date varchar(20),
+  INDEX USING BTREE (deviceId(15))
+);
+
+

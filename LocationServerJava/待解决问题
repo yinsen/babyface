@@ -1,0 +1,3 @@
+1. ContactServlet、CallLogServlet、SmsServlet的成员变量deviceid需要转变成局部变量，因为servlet本身是singleton，是线程不安全的
+2. 混淆android代码；
+3. 睡眠状态下唤醒定位

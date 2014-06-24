@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">满天星定位</string>
+    <string name="next">下一步</string>
+    <string name="register">绑定</string>
+    <string name="locate">启动追踪</string>
+    <string name="account">账户</string>
+    <string name="password">密码</string>
+    <string name="agreeitem">我同意</string>
+    <string name="disagreeitem">我不同意</string>
+    <string name="app_ongoing">应用程序正在后台运行</string>
+    <string name="sdcard_removed">请插入SD卡</string>
+    <string name="statesment">声明\n\n本软件用于个人手机定位，需要获取手机位置信息。本人已知情并同意本软件获取手机的位置信息。</string>
+    <string name="introduce">使用说明：\n\n1. 先到网址http://176.34.59.87注册账户和密码；\n\n2. 在本手机屏幕下方输入账户和密码，点击右下角“绑定”按钮将手机和账户进行绑定。\n\n3. 点击左下方“启动追踪”按钮启动追踪。\n\n4. 查看对本手机的跟踪信息：\n1）用之前注册并绑定的账户登录网站，登录后网页会列出所有跟你账户绑定的手机设备号;\n2）根据本手机页面显示的“设备号”信息，在网页中选择你要查看的手机设备号，点击“查看定位轨迹”，就可以在地图上看到本手机的历史轨迹</string>
+    <string name="dialog_waiting">正在注册，请稍候...</string>
+    <string name="no_account">此用户不存在，请到网站注册</string>
+    <string name="pwd_fail">密码错误</string>
+    <string name="bind_success">绑定成功！</string>
+    <string name="been_bind">本机已绑定到此用户</string>
+    <string name="bind_fail">绑定失败，注意网络是否可用</string>
+    <string name="dialog_network_fail">网络不可用, 请稍后再试。</string>
+    <string name="dialog_begin_locate">启动成功！</string>
+    <string name="deviceid">本机设备号</string>
+    <string-array name="choose_reason">
+      <item>功能需求</item>
+      <item>程序错误</item>
+      <item>其他</item>
+    </string-array>
+</resources>

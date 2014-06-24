@@ -1,0 +1,3 @@
+1. 点击“启动跟踪”，查看全量更新phoneinfo，增量更新phoneinfo，触发更新phoneinfo
+2. 开机启动，查看全量更新phoneinfo，增量更新phoneinfo，触发更新phoneinfo
+3. 查看当phoneTable中无此device时，phoneinfo的update操作是否会导致服务器程序崩溃。
